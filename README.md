@@ -14,15 +14,17 @@ A responsive, accessible profile card component built with HTML, CSS, and vanill
 
 ## 🚀 Live Demo
 
-[View Live Demo](#) ← (You'll add this URL after deploying)
+[Live Demo](https://stage0-profile-card.netlify.app/)
 
 ## 📸 Screenshots
 
 ### Mobile View
-(Add screenshot here after deployment)
+
+![Desktop View](screenshots/desktop.png)
 
 ### Desktop View
-(Add screenshot here after deployment)
+
+![Mobile View](screenshots/mobile.png)
 
 ## 🛠️ Technologies Used
 
@@ -61,27 +63,31 @@ All elements include proper `data-testid` attributes for testing:
 ## 🔧 Local Setup
 
 1. Clone this repository:
+
 ```bash
    git clone https://github.com/YOUR_USERNAME/profile-card.git
 ```
 
 2. Navigate to project folder:
+
 ```bash
    cd profile-card
 ```
 
 3. Open `index.html` in your browser:
+
 ```bash
    # On Mac
    open index.html
-   
+
    # On Windows
    start index.html
-   
+
    # Or just double-click the file
 ```
 
 ## 📁 Project Structure
+
 ```
 profile-card/
 │
@@ -96,6 +102,7 @@ profile-card/
 All interactive elements include `data-testid` attributes for automated testing.
 
 ### Manual Testing Checklist:
+
 - [ ] Profile card displays correctly on mobile
 - [ ] Profile card displays correctly on tablet
 - [ ] Profile card displays correctly on desktop
@@ -111,12 +118,14 @@ All interactive elements include `data-testid` attributes for automated testing.
 To customize with your own information:
 
 1. **Update personal info in `index.html`:**
+
    - Change name in `<h1>`
    - Update bio in `<p>`
    - Replace social media URLs
    - Modify hobbies and dislikes
 
 2. **Change colors in `styles.css`:**
+
    - Primary blue: `#2563eb`
    - Accent red: `#dc2626`
    - Background gray: `#f0f0f0`
@@ -128,6 +137,7 @@ To customize with your own information:
 ## 🚀 Deployment
 
 This project can be deployed to:
+
 - Netlify (drag and drop)
 - GitHub Pages
 - Vercel
@@ -139,7 +149,7 @@ This project is open source and available for educational purposes.
 
 ## 👤 Author
 
-Your Name - [Your GitHub](https://github.com/YOUR_USERNAME)
+Naana Shifah - [Your GitHub](https://github.com/Anonymous2024-spec/)
 
 ## 🙏 Acknowledgments
 
