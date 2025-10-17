@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Profile Card</title>
+  </head>
+
+  <body>
+    <main>
+      <article
+        data-testid="test-profile-card"
+        role="article"
+        aria-label="User profile card"
+      >
+        <figure class="avatar-container">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Profile picture of John Doe"
+            data-testid="test-user-avatar"
+            id="user-avatar"
+          />
+          <input
+            type="file"
+            id="avatar-upload"
+            accept="image/*"
+            style="display: none"
+            aria-label="Upload profile picture"
+          />
+          <button
+            id="upload-btn"
+            class="upload-button"
+            aria-label="Change profile avatar image"
+          >
+            📷 Change Avatar
+          </button>
+        </figure>
+
+        <header>
+          <h1 data-testid="test-user-name">John Doe</h1>
+        </header>
+
+        <p data-testid="test-user-bio">
+          I'm a passionate web developer who loves creating beautiful and
+          functional websites. I enjoy learning new technologies and solving
+          complex problems. When I'm not coding, you can find me exploring
+          nature or reading sci-fi novels.
+        </p>
+
+        <div class="time-container" role="status" aria-live="polite">
+          <span class="time-label">Current Time:</span>
+          <time data-testid="test-user-time" id="current-time">0</time>
+          <span class="time-unit">ms</span>
+        </div>
+
+        <nav
+          data-testid="test-user-social-links"
+          aria-label="Social media links"
+        >
+          <h2>Connect With Me</h2>
+          <ul class="social-links-list">
+            <li>
+              <a
+                href="https://twitter.com/johndoe"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+                aria-label="Visit my Twitter profile (opens in new tab)"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/johndoe"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-github"
+                aria-label="Visit my GitHub profile (opens in new tab)"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/in/johndoe"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-linkedin"
+                aria-label="Visit my LinkedIn profile (opens in new tab)"
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <section
+          data-testid="test-user-hobbies"
+          aria-labelledby="hobbies-heading"
+        >
+          <h2 id="hobbies-heading">My Hobbies</h2>
+          <ul class="hobbies-list">
+            <li>💻 Coding and building projects</li>
+            <li>📚 Reading science fiction novels</li>
+            <li>🎮 Playing video games</li>
+            <li>🏃 Running and hiking</li>
+            <li>🎵 Listening to music</li>
+          </ul>
+        </section>
+
+        <section
+          data-testid="test-user-dislikes"
+          aria-labelledby="dislikes-heading"
+        >
+          <h2 id="dislikes-heading">Things I Dislike</h2>
+          <ul class="dislikes-list">
+            <li>🐛 Bugs in my code</li>
+            <li>⏰ Waking up early</li>
+            <li>🚗 Traffic jams</li>
+            <li>🥦 Overcooked vegetables</li>
+            <li>📱 Phone calls (prefer texting on WhatsApp!)</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
