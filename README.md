@@ -1,6 +1,8 @@
 # Profile Card Project
 
-A responsive, accessible profile card component built with HTML, CSS, and vanilla JavaScript.
+A responsive, accessible profile card component built with HTML, CSS, and vanilla JavaScript, now extended with **multi-page functionality** for Stage 1.
+
+---
 
 ## 🌟 Features
 
@@ -11,20 +13,31 @@ A responsive, accessible profile card component built with HTML, CSS, and vanill
 - ✅ Image upload functionality
 - ✅ Smooth animations and transitions
 - ✅ Keyboard navigation support
+- ✅ Multi-page setup: Profile, Contact Us, About Me
+- ✅ Contact form with validation
+- ✅ Reflective About Me page
+
+---
 
 ## 🚀 Live Demo
 
 [Live Demo](https://stage0-profile-card.netlify.app/)
 
+_(Stage 1 pages available through navigation links in the header)_
+
+---
+
 ## 📸 Screenshots
 
 ### Mobile View
 
-![Desktop View](screenshots/desktop.png)
+![Mobile View](screenshots/mobile.png)
 
 ### Desktop View
 
-![Mobile View](screenshots/mobile.png)
+![Desktop View](screenshots/desktop.png)
+
+---
 
 ## 🛠️ Technologies Used
 
@@ -32,7 +45,9 @@ A responsive, accessible profile card component built with HTML, CSS, and vanill
 - CSS3 (Flexbox, Grid, Media Queries)
 - Vanilla JavaScript (ES6+)
 
-## 📋 Required Elements
+---
+
+## 📋 Required Elements (Stage 0)
 
 All elements include proper `data-testid` attributes for testing:
 
@@ -45,11 +60,50 @@ All elements include proper `data-testid` attributes for testing:
 - ✅ `test-user-hobbies` - Hobbies list
 - ✅ `test-user-dislikes` - Dislikes list
 
+---
+
+## 📋 Required Elements (Stage 1)
+
+### Contact Us Page (`contact.html`)
+
+- `test-contact-name` — Full name input
+- `test-contact-email` — Email input
+- `test-contact-subject` — Subject input
+- `test-contact-message` — Message textarea
+- `test-contact-submit` — Submit button
+- `test-contact-error-<field>` — Field-specific error messages
+- `test-contact-success` — Success message after valid submission
+
+**Validation Rules**
+
+- All fields required
+- Email must be valid
+- Message must be ≥ 10 characters
+
+---
+
+### About Me Page (`about.html`)
+
+- `test-about-bio` — Personal bio
+- `test-about-goals` — Goals in the program
+- `test-about-confidence` — Areas of low confidence
+- `test-about-future-note` — Note to future self
+- `test-about-extra` — Extra thoughts
+
+**Semantic Structure**
+
+- `<main data-testid="test-about-page">`
+- `<section>` for each area with proper headings (`<h2>`, `<h3>`)
+
+---
+
 ## 🎨 Responsive Breakpoints
 
 - **Mobile:** < 768px
 - **Tablet:** 768px - 1023px
 - **Desktop:** ≥ 1024px
+
+---
 
 ## ♿ Accessibility Features
 
@@ -59,99 +113,121 @@ All elements include proper `data-testid` attributes for testing:
 - Focus indicators on interactive elements
 - Alt text on images
 - Screen reader friendly
+- Form inputs linked with labels
+- Error messages tied with `aria-describedby`
+
+---
 
 ## 🔧 Local Setup
 
 1. Clone this repository:
 
 ```bash
-   git clone https://github.com/YOUR_USERNAME/profile-card.git
+git clone https://github.com/YOUR_USERNAME/profile-card.git
 ```
 
 2. Navigate to project folder:
 
 ```bash
-   cd profile-card
+cd profile-card
 ```
 
-3. Open `index.html` in your browser:
+3. Open any page in your browser:
 
 ```bash
-   # On Mac
-   open index.html
+# On Mac
+open index.html
+open contact.html
+open about.html
 
-   # On Windows
-   start index.html
-
-   # Or just double-click the file
+# On Windows
+start index.html
+start contact.html
+start about.html
 ```
+
+---
 
 ## 📁 Project Structure
 
 ```
 profile-card/
 │
-├── index.html          # Main HTML file
-├── styles.css          # All styling
-├── script.js           # JavaScript functionality
-└── README.md           # This file
+├── index.html          # Profile Card (Stage 0)
+├── contact.html        # Contact Us Page (Stage 1)
+├── about.html          # About Me Page (Stage 1)
+├── styles.css          # Shared styling
+├── script.js           # JS for profile card, contact form, live time
+└── README.md
 ```
+
+---
 
 ## 🧪 Testing
 
-All interactive elements include `data-testid` attributes for automated testing.
+**Stage 0**: Profile card
 
-### Manual Testing Checklist:
-
-- [ ] Profile card displays correctly on mobile
-- [ ] Profile card displays correctly on tablet
-- [ ] Profile card displays correctly on desktop
+- [ ] Profile card displays correctly on mobile, tablet, desktop
 - [ ] Current time updates every second
 - [ ] Image upload works and previews correctly
 - [ ] All social links open in new tabs
-- [ ] Keyboard navigation works (Tab key)
-- [ ] Focus indicators are visible
-- [ ] Hover effects work on interactive elements
+- [ ] Keyboard navigation works
+- [ ] Focus indicators and hover effects work
+
+**Stage 1**: Multi-page
+
+**Contact Us Page**
+
+- [ ] All required fields exist and use correct `data-testids`
+- [ ] Validation prevents invalid submissions
+- [ ] Success message only shows after valid submission
+
+**About Me Page**
+
+- [ ] All required sections exist with correct `data-testids`
+- [ ] Semantic HTML used (`main`, `section`, `ul`, `p`, `h2`)
+
+**General**
+
+- [ ] Fully responsive across mobile, tablet, desktop
+- [ ] Accessible (labels, alt text, ARIA associations)
+- [ ] Keyboard navigable
+
+---
 
 ## 📝 Customization
 
-To customize with your own information:
+1. Update personal info in `index.html`, `about.html`, and `contact.html`.
+2. Replace social media URLs and modify hobbies/dislikes.
+3. Change colors in `styles.css` (Primary: `#2563eb`, Accent: `#dc2626`, Background: `#f0f0f0`).
+4. Upload your own avatar for the profile card.
 
-1. **Update personal info in `index.html`:**
-
-   - Change name in `<h1>`
-   - Update bio in `<p>`
-   - Replace social media URLs
-   - Modify hobbies and dislikes
-
-2. **Change colors in `styles.css`:**
-
-   - Primary blue: `#2563eb`
-   - Accent red: `#dc2626`
-   - Background gray: `#f0f0f0`
-
-3. **Upload your own avatar:**
-   - Click "📷 Change Avatar" button
-   - Or replace placeholder URL in HTML
+---
 
 ## 🚀 Deployment
 
 This project can be deployed to:
 
-- Netlify (drag and drop)
+- Netlify
 - GitHub Pages
 - Vercel
 - Any static hosting service
 
+---
+
 ## 📄 License
 
-This project is open source and available for educational purposes.
+Open source, educational purposes.
+
+---
 
 ## 👤 Author
 
 Naana Shifah - [Your GitHub](https://github.com/Anonymous2024-spec/)
 
+---
+
 ## 🙏 Acknowledgments
 
-- Built as part of Stage 0 training
-- Inspired by modern profile card designs
+- Built as part of Stage 0 & Stage 1 training
+- Inspired by modern profile card designs and multi-page accessibility guidelines

@@ -11,7 +11,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
-  padding: 20px;
+  /* padding: 20px; */
   line-height: 1.6;
 }
 
@@ -381,6 +381,7 @@ section[data-testid="test-user-dislikes"] h2 {
   position: sticky;
   top: 0;
   z-index: 1000;
+  margin-bottom: 50px;
 }
 
 .nav-container {
